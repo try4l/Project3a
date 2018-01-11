@@ -1,2 +1,1 @@
-export { default } from './Trucks
-'
+export { default } from './Trucks'
