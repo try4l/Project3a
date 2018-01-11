@@ -5,26 +5,40 @@ var Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
-var ArticleSchema = new Schema({
+var TruckSchema = new Schema({
   // `title` is required and of type String
-  title: {
+  name: {
     type: String,
     required: true
   },
-  // `url` is required and of type String
-  url: {
+  image: {
     type: String,
-    unique: true,
     required: true
   },
-  // publish date and time of article
+  rating: {
+    type: Number,
+    required: true
+  },
+  numRatings: {
+    type: Number,
+    required: true
+  },
+  owner: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  // create date and time of truck
   date: {
     type: Date
   }
 });
 
 // This creates our model from the above schema, using mongoose's model method
-var Article = mongoose.model("Article", ArticleSchema);
+var Truck = mongoose.model("Truck", TruckSchema);
 
 // Export the Article model
-module.exports = Article;
+module.exports = Truck;
