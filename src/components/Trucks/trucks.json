@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"name": "Al's Appetizers",
-		"image1": "/public/assets/images/foodtruck2.jpg",
+		"image1": "/public/assets/images/foodtruck1.jpg",
 		"rating": 4.5,
 		"numratings": 3012,
 		"owner": "Al Dente",
