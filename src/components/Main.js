@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Saved from "./Saved";
 import Search from "./Search";
 import Results from "./Results";
+//import Trucks from "./Trucks";
+import trucks from "./Trucks/trucks.json";
 //import API from "../utils/api";
 import {Image} from 'react-bootstrap';
 
@@ -12,7 +14,8 @@ class Main extends Component {
     startYear: "",
     endYear: "",
     articles: [],
-    saved: []
+    saved: [],
+    //trucks: [],
   };
 
   // When the component mounts, get a list of all saved articles and update this.state.saved
@@ -30,21 +33,18 @@ class Main extends Component {
 
   // Helper method renders one search result div for each article
   renderArticles = () => {
-    return this.state.articles.map(article => (
+    return this.state.articles.map(truck => (
       <Results
-        _id={article._id}
-        key={article._id}
-        title={article.headline.main}
-        date={article.pub_date}
-        url={article.web_url}
-        handleSaveButton={this.handleSaveButton}
-        getSavedArticles={this.getSavedArticles}
+        _id={truck._id}
+        key={truck._id}
+        name={truck.name}
+        date={truck.date}
       />
     ));
   }
 
   // Helper method renders one div for each saved article
-  renderSaved = () => {
+    renderSaved = () => {
     return this.state.saved.map(save => (
       <Saved
         _id={save._id}
@@ -57,6 +57,19 @@ class Main extends Component {
       />
     ));
   }
+  // renderSaved = () => {
+  //   return this.state.saved.map(save => (
+  //     <Saved
+  //       _id={save._id}
+  //       key={save._id}
+  //       title={save.title}
+  //       date={save.date}
+  //       url={save.url}
+  //       handleDeleteButton={this.handleDeleteButton}
+  //       getSavedArticles={this.getSavedArticles}
+  //     />
+  //   ));
+  // }
 
   // Keep track of what user types into topic input so that input can be grabbed later
   handleTopicChange = (event) => {
