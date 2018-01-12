@@ -19,7 +19,7 @@ const Search = props =>
                 <input onChange={props.handleTopicChange} type="text" className="form-control" id="topic" aria-describedby="emailHelp" />
               </div>
               <div className="form-group">
-                <label htmlFor="start-year">Open Time</label>
+                <label htmlFor="start-year">Opening Time</label>
                 <input onChange={props.handleStartYearChange} type="text" className="form-control" id="start-year" />
               </div>
               <div className="form-group">

@@ -1,40 +1,40 @@
-{
-	"id": 1,
-	"name": "Al's Appetizers",
-	"image1": "/public/assets/images/foodtruck2.jpg",
-	"rating": 4.5,
-	"numratings": 3012,
-	"id": 1,
-	"owner": "Al Dente",
-	"image2": "",
-	"description": "Real good food, done real good.",
-	"menu": [{"food"}],
-	"reviews": [{"rave, rave"}],
-	"location": {
-		"mon": {"lat": ‎32.842674, "long": ‎32.715736, "open": "9:00", "close": "17:00"},
-		"tues": {"lat": ‎32.842674, "long": ‎32.715736, "open": "9:00", "close": "17:00"},
-		"wed": {"lat": ‎32.842674, "long": ‎32.715736, "open": "9:00", "close": "17:00"},
-		"thurs": {"lat": ‎32.842674, "long": ‎32.715736, "open": "9:00", "close": "17:00"},
-		"fri": {"lat": ‎32.842674, "long": ‎32.715736, "open": "9:00", "close": "17:00"},		
+[
+	{
+		"id": 1,
+		"name": "Al's Appetizers",
+		"image1": "/public/assets/images/foodtruck2.jpg",
+		"rating": 4.5,
+		"numratings": 3012,
+		"owner": "Al Dente",
+		"image2": "",
+		"description": "Real good food, done real good.",
+		"menu": "food",
+		"reviews": "rave, rave",
+		"locations": {
+			"mon": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"tues": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"wed": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"thurs": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"fri": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"}	
+		}
 	},
-},
-{
-	"id": 1,
-	"name": "Katie's Canapes",
-	"image1": "/public/assets/images/foodtruck2.jpg",
-	"rating": 4.5,
-	"numratings": 3012,
-	"id": 1,
-	"owner": "Katie N. Crumpets",
-	"image2": "",
-	"description": "Food for the sophisticated.",
-	"menu": [{"food"}],
-	"reviews": [{"mmmm, mmmmm"}],
-	"location": {
-		"mon": {"lat": ‎32.842674, "long": ‎32.715736, "open": "9:00", "close": "17:00"},
-		"tues": {"lat": ‎32.842674, "long": ‎32.715736, "open": "9:00", "close": "17:00"},
-		"wed": {"lat": ‎32.842674, "long": ‎32.715736, "open": "9:00", "close": "17:00"},
-		"thurs": {"lat": ‎32.842674, "long": ‎32.715736, "open": "9:00", "close": "17:00"},
-		"fri": {"lat": ‎32.842674, "long": ‎32.715736, "open": "9:00", "close": "17:00"},		
-	},
-},
+	{
+		"id": 2,
+		"name": "Katie's Canapes",
+		"image1": "/public/assets/images/foodtruck2.jpg",
+		"rating": 4.5,
+		"numratings": 3012,
+		"owner": "Katie N. Crumpets",
+		"image2": "",
+		"description": "Food for the sophisticated.",
+		"menu": "food",
+		"reviews": "mmmm, mmmmm",
+		"locations": {
+			"mon": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"tues": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"wed": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"thurs": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"fri": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"}	
+		}
+	}
+]
