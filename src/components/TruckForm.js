@@ -1,6 +1,6 @@
 import React from "react";
 
-const Search = props =>
+const TruckForm = props =>
   <div className="container">
     <div className="row">
       <div className="col-lg-12">
@@ -20,11 +20,11 @@ const Search = props =>
               </div>
               <div className="form-group">
                 <label htmlFor="start-time">Opening Time</label>
-                <input onChange={props.handleStartYearChange} type="text" className="form-control" id="start-year" />
+                <input onChange={props.handleStartYearChange} type="text" className="form-control" id="start-time" />
               </div>
               <div className="form-group">
                 <label htmlFor="end-time">Closing Time</label>
-                <input onChange={props.handleEndYearChange} type="text" className="form-control" id="end-year" />
+                <input onChange={props.handleEndYearChange} type="text" className="form-control" id="end-time" />
               </div>
               <button onClick={props.handleFormSubmit} type="submit" className="btn btn-primary">Submit</button>
             </form>
@@ -93,4 +93,4 @@ const Search = props =>
   </div>
 
 
-export default Search;
+export default TruckForm;
