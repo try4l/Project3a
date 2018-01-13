@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Saved from "./Saved";
-import Search from "./Search";
+//import Search from "./Search";
+import TruckForm from "./TruckForm";
 import Results from "./Results";
 //import Trucks from "./Trucks";
 import trucks from "./Trucks/trucks.json";
@@ -165,7 +166,7 @@ class Main extends Component {
 
             <div> <br/> <hr/> <br/></div>
 
-            <Search
+            <TruckForm
             handleTopicChange={this.handleTopicChange}
             handleStartYearChange={this.handleStartYearChange}
             handleEndYearChange={this.handleEndYearChange}

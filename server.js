@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
-var Article = require('./models/Article.js');
+var Truck = require('./models/Truck.js');
 
 const path = require("path");
 const PORT = process.env.PORT || 3001;
@@ -23,7 +23,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 app.use(express.static('./public'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/nytreact');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/foodtruck');
 
 var db = mongoose.connection;
 
