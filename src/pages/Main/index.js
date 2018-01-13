@@ -1,12 +1,14 @@
 import React, { Component } from "react";
+import {Image} from 'react-bootstrap';
+
+// App Components
 import Saved from "../../components/Saved";
-//import Search from "./Search";
+//import Search from "../../components/Search";
 import TruckForm from "../../components/TruckForm";
 import Results from "../../components/Results";
-//import Trucks from "./Trucks";
+//import Trucks from "../../components/Trucks";
 import trucks from "../../components/Trucks/trucks.json";
-//import API from "../utils/api";
-import {Image} from 'react-bootstrap';
+//import API from "../../utils/api";
 
 class Main extends Component {
 
