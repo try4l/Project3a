@@ -15,7 +15,7 @@ class Main extends Component {
     endYear: "",
     articles: [],
     saved: [],
-    //trucks: [],
+    trucks: [],
   };
 
   // When the component mounts, get a list of all saved articles and update this.state.saved
@@ -32,7 +32,7 @@ class Main extends Component {
   // }
 
   // Helper method renders one search result div for each article
-  renderArticles = () => {
+  renderTrucks = () => {
     return this.state.articles.map(truck => (
       <Results
         _id={truck._id}
@@ -128,27 +128,49 @@ class Main extends Component {
           <div className="jumbotron">
 
                 <Image 
-                  style={background} responsive 
-                  src="/assets/images/headline2.jpg">
+                  style={background} responsive
+                  className="row justify-content-center"
+                  src="/assets/images/foodtruck3.png">
                 </Image>
 
             <h1 className="text-center"><strong>Find your favorite food truck goodness.</strong></h1>
             <h2 className="text-center">Hey Dude... Where's My Food?</h2>
           </div>
+
           {/* Map */}
-            <div>
+            <div className="row justify-content-center">
             <Image 
               style={background} responsive 
               src="/assets/images/san-diego-area-map.jpg">
             </Image>
             </div>
 
+            <div> <br/> <hr/> <br/></div>
+
+            <div className="btn-toolbar row justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+              <div className="btn-group mr-2" role="group" aria-label="First group">
+                <button type="button" className="btn btn-secondary">Sun</button>
+              </div>
+              <div className="btn-group mr-2" role="group" aria-label="Second group">
+                <button type="button" className="btn btn-secondary">Mon</button>
+                <button type="button" className="btn btn-secondary">Tues</button>
+                <button type="button" className="btn btn-secondary">Wed</button>
+                <button type="button" className="btn btn-secondary">Thurs</button>
+                <button type="button" className="btn btn-secondary">Fri</button>
+              </div>
+              <div className="btn-group mr-2" role="group" aria-label="Third group">
+                <button type="button" className="btn btn-secondary">Sat</button>
+              </div>
+            </div>
+
+            <div> <br/> <hr/> <br/></div>
+
             <Search
             handleTopicChange={this.handleTopicChange}
             handleStartYearChange={this.handleStartYearChange}
             handleEndYearChange={this.handleEndYearChange}
             handleFormSubmit={this.handleFormSubmit}
-            renderArticles={this.renderArticles}
+            renderTrucks={this.renderTrucks}
           />
           {/* Saved Articles Section */}
           <div className="container">
@@ -158,7 +180,7 @@ class Main extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">
                       <strong>
-                        <i className="fa fa-file-text-o" aria-hidden="true"></i> Saved Trucks</strong>
+                        <i className="fa fa-truck" aria-hidden="true"></i> Saved Trucks</strong>
                     </h3>
                   </div>
                   <div className="panel-body">
@@ -170,6 +192,7 @@ class Main extends Component {
               </div>
             </div>
           </div>
+
           <footer>
             <hr />
             <p className="pull-left">
@@ -177,6 +200,7 @@ class Main extends Component {
               Built using React.js
             </p>
           </footer>
+
         </div>
       </div>
 

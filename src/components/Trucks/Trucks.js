@@ -1,7 +1,7 @@
 //import React from 'react';
 import React, { Component } from "react";
 import './Trucks.css';
-//import trucks from './trucks.json';
+import trucks from './trucks.json';
 
 
 // const Truck = props => (
@@ -13,7 +13,7 @@ class Truck extends Component {
   constructor(props) {
   super(props);
   this.state = {
-    //trucks,
+    trucks,
     //highScore
     };
   }
