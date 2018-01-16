@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+//import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import logo from './logo.svg';
 import './App.css';
 
 // Page Components
@@ -18,9 +18,6 @@ import About from '../About';
 import SignUp from '../SignUp';
 import TruckDetail from '../TruckDetail';
 
-
-
-
 import NotFound from '../NotFound';
 
 
@@ -28,13 +25,6 @@ const App = () => {
 	return (
 		<Router>
 			<div>
-		      <ul>
-		        <li><Link to="/">Home</Link></li>
-		        <li><Link to="/about">About</Link></li>
-		        <li><Link to="/user">Dashboard</Link></li>
-		        <li><Link to="/admin">Dashboard</Link></li>
-		        <li><Link to="/account">Account</Link></li>
-		      </ul>
 
 		      <hr/>
 
@@ -57,6 +47,7 @@ const App = () => {
 				<Route component={NotFound}/>
 			      
 		      </Switch>
+
 		    </div>
 	    </Router>
     )

@@ -9,6 +9,8 @@ import Results from "../../components/Results";
 //import Trucks from "../../components/Trucks";
 import trucks from "../../components/Trucks/trucks.json";
 //import API from "../../utils/api";
+import Footer from "../../components/Trucks/trucks.json";
+import logo from '../App/logo.svg';
 
 class Main extends Component {
 
@@ -196,15 +198,12 @@ class Main extends Component {
             </div>
           </div>
 
-          <footer>
-            <hr />
-            <p className="pull-left">
-              <i className="fa fa-github" aria-hidden="true"></i>
-              Built using React.js
-            </p>
-          </footer>
+
 
         </div>
+
+      {/*<Footer/>*/}
+
       </div>
 
     );
