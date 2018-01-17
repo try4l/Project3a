@@ -3,12 +3,9 @@ import {Image} from 'react-bootstrap';
 
 // App Components
 import Saved from "../../components/Saved";
-//import Search from "../../components/Search";
 import TruckForm from "../../components/TruckForm";
 import Results from "../../components/Results";
-//import Trucks from "../../components/Trucks";
 import trucks from "../../components/Trucks/trucks.json";
-//import API from "../../utils/api";
 import Footer from "../../components/Trucks/trucks.json";
 import logo from '../App/logo.svg';
 
@@ -198,12 +195,7 @@ class Main extends Component {
             </div>
           </div>
 
-
-
         </div>
-
-      {/*<Footer/>*/}
-
       </div>
 
     );

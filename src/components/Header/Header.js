@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 
 const Header = () => {
-	return (
-    <div>
+
+  return (
+    <div className="container">
+    <div className="row justify-content-center">
+
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a clasNames="navbar-brand" href="#">Navbar</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +40,9 @@ const Header = () => {
       </nav>
 
     </div>
+    </div>
   );
 }
 
 export default Header;
+
