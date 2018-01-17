@@ -8,7 +8,6 @@ import Results from "../../components/Results";
 //import trucks from "../../components/Trucks/trucks.json";
 
 
-
 class Main extends Component {
 
   state = {
@@ -200,7 +199,6 @@ class Main extends Component {
 
     );
   }
-
 }
 
 export default Main;

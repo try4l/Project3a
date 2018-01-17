@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "description": "Final Project for UCSD Coding Bootcamp",
-  // "main": "server.js",
+  "main": "server.js",
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
     "express": "^4.16.2",
     "mongoose": "^4.13.9",
     "morgan": "^1.9.0",
-    "nodemon": "^1.14.11",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.0",
     "react-dom": "^16.2.0",
@@ -18,16 +18,20 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17"
   },
+  "author": "abd",
+  "license": "ISC",
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
-    "build": "node scripts/build.js",
+    "start": "react-scripts start",
+    "start": "concurrently \"node server.js\" \"react-scripts start\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    //"start": "react-scripts start",
-    //"build": "react-scripts build",
-    //"test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.14.11"
   }
 }
