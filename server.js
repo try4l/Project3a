@@ -36,15 +36,15 @@ db.once('open', function () {
 });
 
 // Routing
-var articlesController = require("./controllers/article-controller");
+var truckController = require("./controllers/truck-controller");
 var router = new express.Router();
 // Define any API routes first
 // Get saved articles
-router.get("/api/saved", articlesController.find);
+router.get("/api/saved", truckController.find);
 // Save articles
-router.post("/api/saved", articlesController.insert);
+router.post("/api/saved", truckController.insert);
 // delete saved articles
-router.delete("/api/saved/:id", articlesController.delete);
+router.delete("/api/saved/:id", truckController.delete);
 // Send every other request to the React app
 router.get("/*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
