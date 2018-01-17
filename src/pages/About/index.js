@@ -20,7 +20,7 @@ class About extends Component {
 
           <div className="card" style={{width: "36rem", padding: "20px", margin: "20px"}}>
 
-            <img className="card-img-top" src="/assets/images/carissa-gan-76304.jpg" alt="Card image cap" />
+            <img className="card-img-top" src="/assets/images/carissa-gan-76304.jpg" alt="Card cap" />
 
             <div className="card-body">
               <h3 className="card-title">Food Truck Locator App</h3>
@@ -34,9 +34,9 @@ class About extends Component {
             </ul>
 
             <div className="card-body">
-              <div class="row">
+              <div className="row">
 
-                <div class="col-sm">
+                <div className="col-sm">
             
                         <p className="pull-left">
                           <i className="fa fa-github" aria-hidden="true"></i>
@@ -44,14 +44,14 @@ class About extends Component {
                         </p>
                 </div>
             
-                <div class="col-sm">
+                <div className="col-sm">
                         <p className="pull-left">
                           <i className="fa fa-github" aria-hidden="true"></i>
                         <a href="https://github.com/try4l" className="card-link">Alan</a>
                         </p>
                 </div>
             
-                <div class="col-sm">
+                <div className="col-sm">
                         <p className="pull-left">
                           <i className="fa fa-github" aria-hidden="true"></i>
                         <a href="https://github.com/MrSpahceman" className="card-link">Carlos</a>
