@@ -5,9 +5,9 @@ import {Image} from 'react-bootstrap';
 import Saved from "../../components/Saved";
 import TruckForm from "../../components/TruckForm";
 import Results from "../../components/Results";
-import trucks from "../../components/Trucks/trucks.json";
-import Footer from "../../components/Trucks/trucks.json";
-import logo from '../App/logo.svg';
+//import trucks from "../../components/Trucks/trucks.json";
+
+
 
 class Main extends Component {
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 // App Components
 import logo from '../../pages/App/logo.svg';
