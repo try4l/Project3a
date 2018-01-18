@@ -24,31 +24,31 @@ import NotFound from '../NotFound';
 const App = () => {
 	return (
 		<Router>
-			<div>
+				<div>
 
-		      <hr/>
+			      <hr/>
 
-		      <Switch>
-		      	{/* SHARED ROUTES */}
-		      	<Route exact path="/account" component={UserAccount}/>
-			  	{/* ADMIN ROUTES */}
-				<Route exact path="/admin" component={AdminHome}/>
-				<Route exact path="/admin/account" component={UserAccount}/>
-				<Route path="/admin/truck/:id" component={TruckDetailForm}/>
-			   	{/* CLIENT ROUTES */}
-			   	<Route exact path="/user" component={UserHome}/>
-			   	
-				{/* PUBLIC ROUTES */}
-				<Route exact path="/" component={Main}/>
-				<Route exact path="/auth" component={Auth}/>
-				<Route exact path="/signUp" component={SignUp}/>
-				<Route path="/truck/:id" component={TruckDetail}/>
-				<Route exact path="/about" component={About}/>
-				<Route component={NotFound}/>
-			      
-		      </Switch>
+			      <Switch>
+			      	{/* SHARED ROUTES */}
+			      	<Route exact path="/account" component={UserAccount}/>
+				  	{/* ADMIN ROUTES */}
+					<Route exact path="/admin" component={AdminHome}/>
+					<Route exact path="/admin/account" component={UserAccount}/>
+					<Route path="/admin/truck/:id" component={TruckDetailForm}/>
+				   	{/* CLIENT ROUTES */}
+				   	<Route exact path="/user" component={UserHome}/>
+				   	
+					{/* PUBLIC ROUTES */}
+					<Route exact path="/" component={Main}/>
+					<Route exact path="/auth" component={Auth}/>
+					<Route exact path="/signUp" component={SignUp}/>
+					<Route path="/truck/:id" component={TruckDetail}/>
+					<Route exact path="/about" component={About}/>
+					<Route component={NotFound}/>
+				      
+			      </Switch>
 
-		    </div>
+			    </div>
 	    </Router>
     )
 }
