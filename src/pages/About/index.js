@@ -18,7 +18,7 @@ class About extends Component {
         <div className="container">
         <div className="row justify-content-center">
 
-          <div className="card" style={{width: "36rem", padding: "20px", margin: "20px"}}>
+          <div className="card" style={{width: "36rem", padding: "20px", margin: "20px", textAlign: "center"}}>
 
             <img className="card-img-top" src="/assets/images/carissa-gan-76304.jpg" alt="Card cap" />
 

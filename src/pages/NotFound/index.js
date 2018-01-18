@@ -14,7 +14,8 @@ export default class NotFound extends Component {
     return (
       <div className={classnames('NotFound', className)} {...props}>
         <h1>
-          404 <small>Not Found :(</small>
+          404 Not Found :(
+          <p><i><small>you broke the internet</small></i></p>
         </h1>
       </div>
     );
