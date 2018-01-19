@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import './style.css';
 
-class About extends Component {
+class UserAccount extends Component {
   static propTypes = {}
   static defaultProps = {}
   state = {}
@@ -21,4 +21,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default UserAccount;
