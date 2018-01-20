@@ -2,4 +2,5 @@
 
 module.exports = {
   Truck: require("./Truck"),
+  TruckList: require("./TruckList")
 };
