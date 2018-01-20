@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom';
 import Header from './components/Header';
 import App from './pages/App';
 import Footer from './components/Footer';
+import Exp from './components/Exp';
+import Clock from './components/Clock';
 
 import './index.css';
 
