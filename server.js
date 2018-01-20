@@ -9,6 +9,8 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+var db = require('./models');
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -25,13 +27,11 @@ app.use(express.static('./public'));
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/foodtruck');
 
-var db = mongoose.connection;
-
-db.on('error', function (err) {
+mongoose.connection.on('error', function (err) {
  console.log('Mongoose Error: ', err);
 });
 
-db.once('open', function () {
+mongoose.connection.once('open', function () {
  console.log('Mongoose connection successful.');
 });
 
