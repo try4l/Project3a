@@ -5,6 +5,7 @@
   "description": "Final Project for UCSD Coding Bootcamp",
   "main": "server.js",
   "dependencies": {
+    "auth0-js": "^9.1.0",
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0-alpha.6",

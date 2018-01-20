@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //import { browserHistory } from 'react-router';
 
+
 import Header from './components/Header';
-import App from './pages/App';
+import App from './pages/App/index';
 import Footer from './components/Footer';
+import { makeMainRoutes } from './routes';
+
 
 import './index.css';
 
 ReactDOM.render(
+	
 	<div>
 		<Header />
   		<App />
