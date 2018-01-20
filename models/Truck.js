@@ -13,23 +13,23 @@ var TruckSchema = new Schema({
   },
   image: {
     type: String,
-    required: true
+    required: false
   },
   rating: {
     type: Number,
-    required: true
+    required: false
   },
   numRatings: {
     type: Number,
-    required: true
+    required: false
   },
   owner: {
     type: String,
-    required: true
+    required: false
   },
   description: {
     type: String,
-    required: true
+    required: false
   },
   // create date and time of truck
   date: {
