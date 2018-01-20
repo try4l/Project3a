@@ -17,6 +17,7 @@ import Auth from '../Auth';
 import About from '../About';
 import SignUp from '../SignUp';
 import TruckDetail from '../TruckDetail';
+import Exp from '../../components/Exp'
 
 import NotFound from '../NotFound';
 
@@ -44,6 +45,7 @@ const App = () => {
 					<Route exact path="/signUp" component={SignUp}/>
 					<Route path="/truck/:id" component={TruckDetail}/>
 					<Route exact path="/about" component={About}/>
+					<Route exact path="/exp" component={Exp}/>
 					<Route component={NotFound}/>
 				      
 			      </Switch>
