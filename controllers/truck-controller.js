@@ -1,5 +1,9 @@
 var Truck = require("../models/Truck");
 
+var express = require('express');
+var app = express();
+var router = express.Router();
+
 module.exports = {
   // get trucks from database
   find: function(req, res) {
