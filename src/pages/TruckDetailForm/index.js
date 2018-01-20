@@ -14,11 +14,14 @@ class TruckDetailForm extends Component {
   static propTypes = {}
   static defaultProps = {}
   state = {
-    topic: "",
-    startYear: "",
-    endYear: "",
-    saved: [],
-    trucks: [],    
+    name: "",
+    image: "",
+    rating: 0,
+    numRatings: 0,
+    owner: "",
+    description: "",
+    date: new Date(),
+    trucks: []    
   };
 
   // When the component mounts, get a list of all saved trucks and update this.state.saved
@@ -47,19 +50,19 @@ class TruckDetailForm extends Component {
   }
 
   // Helper method renders one div for each saved article
-    renderSaved = () => {
-    return this.state.saved.map(save => (
-      <Saved
-        _id={save._id}
-        key={save._id}
-        title={save.title}
-        date={save.date}
-        url={save.url}
-        handleDeleteButton={this.handleDeleteButton}
-        getSavedArticles={this.getSavedArticles}
-      />
-    ));
-  }
+  //   renderSaved = () => {
+  //   return this.state.saved.map(save => (
+  //     <Saved
+  //       _id={save._id}
+  //       key={save._id}
+  //       title={save.title}
+  //       date={save.date}
+  //       url={save.url}
+  //       handleDeleteButton={this.handleDeleteButton}
+  //       getSavedArticles={this.getSavedArticles}
+  //     />
+  //   ));
+  // }
   // renderSaved = () => {
   //   return this.state.saved.map(save => (
   //     <Saved
@@ -89,19 +92,19 @@ class TruckDetailForm extends Component {
     this.setState({ endYear: event.target.value });
   }
 
-  // On form submits, perform NYT api search with user input
-  // handleFormSubmit = (event) => {
-  //   event.preventDefault();
-  //   console.log("Getting NYT Articles");
-  //   console.log("this.state.topic: ", this.state.topic);
-  //   console.log("this.state.startYear: ", this.state.startYear);
-  //   console.log("this.state.endYear: ", this.state.endYear);
-  //   API.searchNYT(this.state.topic, this.state.startYear, this.state.endYear)
-  //     .then((res) => {
-  //       this.setState({ articles: res.data.response.docs });
-  //       console.log("this.state.articles: ", this.state.articles);
-  //     });
-  // }
+ 
+  handleFormSubmit = (event) => {
+    event.preventDefault();
+    console.log("event", this.state);
+    // console.log("this.state.topic: ", this.state.topic);
+    // console.log("this.state.startYear: ", this.state.startYear);
+    // console.log("this.state.endYear: ", this.state.endYear);
+    // //API.searchNYT(this.state.topic, this.state.startYear, this.state.endYear)
+    //   .then((res) => {
+    //     this.setState({ articles: res.data.response.docs });
+    //     console.log("this.state.articles: ", this.state.articles);
+      // });
+  }
 
   // On save article button click, add article to database
   // handleSaveButton = (id) => {
@@ -125,15 +128,17 @@ class TruckDetailForm extends Component {
       <div className="main-container">
         <div className="container">
 
-          <div className={classnames('About', className)} {...props}>
+          <div className={classnames('TruckDetailForm', className)} {...props}>
             <h1>
               Truck Detail Form
             </h1>
           </div>
               <TruckForm
-                handleTopicChange={this.handleTopicChange}
-                handleStartYearChange={this.handleStartYearChange}
-                handleEndYearChange={this.handleEndYearChange}
+                handleNameChange={this.handleNameChange}
+                handleImageChange={this.handleImageChange}
+                handleRatingChange={this.handleRatingChange}
+                handleOwnerChange={this.handleOwnerChange}
+                handleDescriptionChange={this.handleDesriptionChange}
                 handleFormSubmit={this.handleFormSubmit}
                 renderTrucks={this.renderTrucks}
               />
@@ -150,7 +155,6 @@ class TruckDetailForm extends Component {
                       </div>
                       <div className="panel-body">
                         <ul className="list-group">
-                          {this.renderSaved()}
                         </ul>
                       </div>
                     </div>

@@ -12,8 +12,6 @@ var router = express.Router();
 
 var db = require('./models');
 
-var db = require('./models');
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -29,7 +27,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(express.static('./public'));
 
 mongoose.Promise = Promise;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/foodtruck');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/TruckList');
 
 mongoose.connection.on('error', function (err) {
  console.log('Mongoose Error: ', err);
@@ -64,7 +62,7 @@ app.post("/submit", function(req, res) {
       // If a Truck was created successfully, find one TruckList (there's only one) and push the new Truck's _id to the TruckLists's `trucks` array
       // { new: true } tells the query that we want it to return the updated TruckList -- it returns the original by default
       // Since our mongoose query returns a promise, we can chain another `.then` which receives the result of the query
-      return db.TruckList.findOneAndUpdate({}, { $push: { books: dbTruck._id } }, { new: true });
+      return db.TruckList.findOneAndUpdate({}, { $push: { trucks: dbTruck._id } }, { new: true });
     })
     .then(function(dbTruckList) {
       // If the TruckList was updated successfully, send it back to the client

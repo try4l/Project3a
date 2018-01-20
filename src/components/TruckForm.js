@@ -1,5 +1,7 @@
 import React from "react";
 
+
+//database info renders here
 const TruckForm = props =>
   <div className="container">
     <div className="row">
@@ -13,58 +15,31 @@ const TruckForm = props =>
             </h3>
           </div>
           <div className="panel-body">
-            <form>
+            <form action="/submit" method="post">
               <div className="form-group">
-                <label htmlFor="topic">Truck</label>
-                <input onChange={props.handleTopicChange} type="text" className="form-control" id="topic" aria-describedby="emailHelp" />
+                <label htmlFor="name">Truck Name</label>
+                <input onChange={props.handleNameChange} type="text" className="form-control" id="name" aria-describedby="name"/>
               </div>
               <div className="form-group">
-                <label htmlFor="start-time">Opening Time</label>
-                <input onChange={props.handleStartYearChange} type="text" className="form-control" id="start-time" />
+                <label htmlFor="image">Truck Image</label>
+                <input onChange={props.handleImageChange} type="text" className="form-control" id="image"/>
               </div>
               <div className="form-group">
-                <label htmlFor="end-time">Closing Time</label>
-                <input onChange={props.handleEndYearChange} type="text" className="form-control" id="end-time" />
+                <label htmlFor="end-time">Rating</label>
+                <input onChange={props.handleRatingChange} type="text" className="form-control" id="rating" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="owner">Owner</label>
+                <input onChange={props.handleOwnerChange} type="text" className="form-control" id="owner"/>
+              </div><div className="form-group">
+                <label htmlFor="end-time">Description</label>
+                <input onChange={props.handleDescriptionChange} type="text" className="form-control" id="rating"/>
               </div>
               <button onClick={props.handleFormSubmit} type="submit" className="btn btn-primary">Submit</button>
+
             </form>
 
-            <form>
-              <div className="form-row justify-content-center">
-                <div className="col">
-                </div>    
-                <div className="col">
-                  <input type="text" className="form-control" placeholder="Truck Name"/>
-                </div>
-                <div className="col">
-                </div>
-              </div>
-
-            <div> <br/> <hr/> <br/></div>
-       
-              <div className="form-row">
-                <div className="col">
-                </div>
-                <div className="col">
-                  <input type="text" className="form-control" placeholder="Day"/>
-                </div>
-                <div className="col">
-                  <input type="text" className="form-control" placeholder="Start Time"/>
-                </div>
-                <div className="col">
-                  <input type="text" className="form-control" placeholder="End Time"/>
-                </div>
-                <div className="col">
-                  <input type="text" className="form-control" placeholder="Latitude"/>
-                </div>
-                <div className="col">
-                  <input type="text" className="form-control" placeholder="Longitude"/>
-                </div>
-                <div className="col">
-                </div>
-              </div>
-              <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
+            
 
           </div>
         </div>
