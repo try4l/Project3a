@@ -1,5 +1,6 @@
+
+import React, { Component} from 'react';
 //import React, { Component } from 'react';
-import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 
@@ -11,9 +12,11 @@ import AdminHome from '../AdminHome';
 import TruckDetailForm from '../TruckDetailForm';
 // CLIENT ROUTE COMPONENTS
 import UserHome from '../UserHome';
+
+import { Navbar, Button } from 'react-bootstrap';
 // PUBLIC ROUTE COMPONENTS
 import Main from '../Main';
-import Auth from '../Auth';
+import Auth from '../Auth/Auth';
 import About from '../About';
 import SignUp from '../SignUp';
 import TruckDetail from '../TruckDetail';
@@ -56,3 +59,11 @@ const App = () => {
 }
 
 export default App;
+
+ 
+
+
+
+
+
+
