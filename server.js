@@ -41,7 +41,7 @@ mongoose.connection.once('open', function () {
 	// When the server starts, create and save a new TruckList document to the db
 // The "unique" rule in the TruckList model's schema will prevent duplicate TruckLists from being added to the server
 db.TruckList
-  .create({ name: "Food Truck List" })
+  .create({name: "Food Truck List"})
   .then(function(dbTruckList) {
     // If saved successfully, print the new TruckList document to the console
     console.log(dbTruckList);
