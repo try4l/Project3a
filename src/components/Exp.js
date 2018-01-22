@@ -1,11 +1,20 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
 
+import NumList from './NumList';
+
+
+const numbers = [1, 2, 3, 4, 5];
 
 class Exp extends React.Component {
 
   render() {
-    return <h1>Hello, {this.props.name}</h1>;
+    return (
+	    	<div>	
+	 	   		<h1>Hello {this.props.name}</h1>
+	    		<NumList numbers={numbers} />
+	    	</div>
+    	)
   }
 
 }

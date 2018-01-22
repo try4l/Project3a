@@ -11,9 +11,9 @@ import Clock from './components/Clock';
 import { makeMainRoutes } from './routes';
 import './index.css';
 
+
 ReactDOM.render(
-	
-	<div>
+	<div>  
 		<Header />
   		<App />
   		<Footer />

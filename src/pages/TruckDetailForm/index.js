@@ -11,6 +11,10 @@ import Results from "../../components/Results";
 
 
 class TruckDetailForm extends Component {
+  // constructor(props) {
+  //  super(props);
+  //  this.state = {date: new Date()};
+  // }
   static propTypes = {}
   static defaultProps = {}
   state = {
