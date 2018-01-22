@@ -10,8 +10,9 @@ import Clock from './components/Clock';
 
 import './index.css';
 
+
 ReactDOM.render(
-	<div>
+	<div>  
 		<Header />
   		<App />
   		<Footer />
