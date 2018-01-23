@@ -21,7 +21,7 @@ console.log("");
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("./build"));
 }
 app.use('public', express.static(__dirname + "/public"));
 // Run Morgan for Logging
