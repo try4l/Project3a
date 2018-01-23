@@ -7,6 +7,7 @@ import './style.css';
 import Saved from "../../components/Saved";
 import TruckForm from "../../components/TruckForm";
 import Results from "../../components/Results";
+import API from "../../utils/api";
 //import trucks from "../../components/Trucks/trucks.json";
 
 
@@ -82,27 +83,35 @@ class TruckDetailForm extends Component {
   // }
 
   // Keep track of what user types into topic input so that input can be grabbed later
-  handleTopicChange = (event) => {
-    this.setState({ topic: event.target.value });
+  handleNameChange = (event) => {
+    this.setState({ name: event.target.value });
   }
 
   // Keep track of what user types into topic input so that input can be grabbed later
-  handleStartYearChange = (event) => {
-    this.setState({ startYear: event.target.value });
+  handleImageChange = (event) => {
+    this.setState({ image: event.target.value });
   }
 
   // Keep track of what user types into topic input so that input can be grabbed later
-  handleEndYearChange = (event) => {
-    this.setState({ endYear: event.target.value });
+  handleRatingChange = (event) => {
+    this.setState({ rating: event.target.value });
   }
 
  
+ // On formsubmit, add truck to the database
   handleFormSubmit = (event) => {
     event.preventDefault();
+    console.log("TruckDetailForm: handleFormSubmit");
     console.log("event", this.state);
-    // console.log("this.state.topic: ", this.state.topic);
-    // console.log("this.state.startYear: ", this.state.startYear);
-    // console.log("this.state.endYear: ", this.state.endYear);
+    console.log("this.state.name: ", this.state.name);
+    console.log("this.state.image: ", this.state.image);
+    console.log("this.state.rating: ", this.state.rating);   
+    const newSave = {name: this.state.name, image: this.state.image, rating: this.state.rating};
+    API.saveTruck(newSave)
+      .then(
+        console.log("Saved!")
+        );
+  //   .then(this.getSavedArticles());
     // //API.searchNYT(this.state.topic, this.state.startYear, this.state.endYear)
     //   .then((res) => {
     //     this.setState({ articles: res.data.response.docs });
