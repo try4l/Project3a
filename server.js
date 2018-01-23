@@ -18,7 +18,7 @@ var db = require('./models');
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-
+app.use('public', express.static(__dirname + "/public"));
 // Run Morgan for Logging
 app.use(logger('dev'));
 app.use(bodyParser.json());
