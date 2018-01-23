@@ -1,4 +1,5 @@
 const express = require("express");
+const sslRedirect = require('heroku-ssl-redirect');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
@@ -13,6 +14,9 @@ var router = express.Router();
 var db = require('./models');
 
 var db = require('./models');
+
+// enable ssl redirect
+app.use(sslRedirect());
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
