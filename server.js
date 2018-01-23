@@ -29,7 +29,9 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(express.static('./public'));
 
 mongoose.Promise = Promise;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/foodtruck');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/foodtruck', {
+  useMongoClient: true
+});
 
 mongoose.connection.on('error', function (err) {
  console.log('Mongoose Error: ', err);
