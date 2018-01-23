@@ -13,8 +13,8 @@ const api = {
     return axios.get("/api/saved");
   },
   // Save a truck to database
-  saveTruck: function(articleObj) {
-    return axios.post("/api/saved", articleObj);
+  saveTruck: function(truckObj) {
+    return axios.post("/api/saved", truckObj);
   },
   // Delete a truck from the database
   deleteTruck: function(id) {

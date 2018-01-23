@@ -1,4 +1,5 @@
 var Truck = require("../models/Truck");
+var TruckList = require("../models/TruckList");
 
 var express = require('express');
 var app = express();
@@ -8,7 +9,7 @@ module.exports = {
   // get trucks from database
   find: function(req, res) {
     console.log("truck-controller: find:");
-    Truck.find().then(function(doc) {
+    TruckList.find().then(function(doc) {
       res.json(doc);
     }).catch(function(err) {
       res.json(err);
@@ -18,7 +19,7 @@ module.exports = {
   insert: function(req, res) {
     console.log("truck-controller: insert:");
     console.log("req.body: ", req.body);
-    Truck.create(req.body).then(function(doc) {
+    TruckList.create(req.body).then(function(doc) {
       res.json(doc);
       console.log("doc: ", doc);
     }).catch(function(err) {
@@ -28,7 +29,7 @@ module.exports = {
   // delete truck from database
   delete: function(req, res) {
     console.log("truck-controller: delete:");
-    Truck.remove({
+    TruckList.remove({
       _id: req.params.id
     }).then(function(doc) {
       res.json(doc);
