@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { CardColumns, CardDeck, CardGroup } from 'reactstrap';
 import classnames from 'classnames';
 
 import './style.css';
@@ -33,15 +34,22 @@ class TruckDetail extends Component {
             Truck Detail
           </h1>
 
-          {this.state.trucks.map(truck => (
-            <Truck
-            id={truck.id}
-            key={truck.id}
-            image={truck.image}
-            name={truck.name}
-            rating={truck.rating}            
-            />
-          ))}
+          <CardGroup>
+            <CardColumns>
+
+              {this.state.trucks.map(truck => (
+                <Truck
+                id={truck.id}
+                key={truck.id}
+                image={truck.image}
+                name={truck.name}
+                rating={truck.rating}            
+                />
+              ))}
+
+          </CardColumns>         
+        </CardGroup>
+
         </Wrapper>
 
       </Container>
