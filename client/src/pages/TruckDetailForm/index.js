@@ -5,11 +5,9 @@ import './style.css';
 
 // App Components
 import Saved from "../../components/Saved";
-import TruckForm from "../../components/TruckForm";
 import Results from "../../components/Results";
+import TruckForm from "../../components/TruckForm";
 import API from "../../utils/api";
-//import trucks from "../../components/Trucks/trucks.json";
-
 
 class TruckDetailForm extends Component {
   // constructor(props) {
@@ -73,20 +71,7 @@ class TruckDetailForm extends Component {
   //     />
   //   ));
   // }
-  // renderSaved = () => {
-  //   return this.state.saved.map(save => (
-  //     <Saved
-  //       _id={save._id}
-  //       key={save._id}
-  //       title={save.title}
-  //       date={save.date}
-  //       url={save.url}
-  //       handleDeleteButton={this.handleDeleteButton}
-  //       getSavedArticles={this.getSavedArticles}
-  //     />
-  //   ));
-  // }
-
+ 
   // Keep track of what user types into topic input so that input can be grabbed later
   handleNameChange = (event) => {
     this.setState({ name: event.target.value });
@@ -151,6 +136,7 @@ class TruckDetailForm extends Component {
               Truck Detail Form
             </h1>
           </div>
+
               <TruckForm
                 handleNameChange={this.handleNameChange}
                 handleImageChange={this.handleImageChange}
@@ -160,25 +146,6 @@ class TruckDetailForm extends Component {
                 handleFormSubmit={this.handleFormSubmit}
                 renderTrucks={this.renderTrucks}
               />
-              {/* Saved Trucks Section */}
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-12">
-                    <div className="panel panel-primary">
-                      <div className="panel-heading">
-                        <h3 className="panel-title">
-                          <strong>
-                            <i className="fa fa-truck" aria-hidden="true"></i> Saved Trucks</strong>
-                        </h3>
-                      </div>
-                      <div className="panel-body">
-                        <ul className="list-group">
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>  
 
         </div>
       </div>  
