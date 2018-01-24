@@ -8,8 +8,8 @@ var router = express.Router();
 module.exports = {
   // get trucks from database
   find: function(req, res) {
-    console.log("truck-controller: find:");
-    Truck.find().then(function(doc) {
+    console.log("trucklist-controller: find:");
+    TruckList.find().then(function(doc) {
       res.json(doc);
     }).catch(function(err) {
       res.json(err);
@@ -17,9 +17,9 @@ module.exports = {
   },
   // add new truck to database
   insert: function(req, res) {
-    console.log("truck-controller: insert:");
+    console.log("trucklist-controller: insert:");
     console.log("req.body: ", req.body);
-    Truck.create(req.body).then(function(doc) {
+    TruckList.create(req.body).then(function(doc) {
       res.json(doc);
       console.log("doc: ", doc);
     }).catch(function(err) {
@@ -28,8 +28,8 @@ module.exports = {
   },
   // delete truck from database
   delete: function(req, res) {
-    console.log("truck-controller: delete:");
-    Truck.remove({
+    console.log("trucklist-controller: delete:");
+    TruckList.remove({
       _id: req.params.id
     }).then(function(doc) {
       res.json(doc);

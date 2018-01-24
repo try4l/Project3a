@@ -49,6 +49,11 @@ class TruckDetailForm extends Component {
         _id={truck._id}
         key={truck._id}
         name={truck.name}
+        image={truck.date}
+        rating={truck.date}
+        numRatings={truck.date}
+        owner={truck.date}
+        description={truck.date}
         date={truck.date}
       />
     ));

@@ -44,13 +44,24 @@ mongoose.connection.once('open', function () {
 });
 
 
-	// When the server starts, create and save a new TruckList document to the db
+// When the server starts, create and save a new TruckList document to the db
 // The "unique" rule in the TruckList model's schema will prevent duplicate TruckLists from being added to the server
 db.TruckList
   .create({name: "Food Truck List"})
   .then(function(dbTruckList) {
     // If saved successfully, print the new TruckList document to the console
     console.log(dbTruckList);
+  })
+  .catch(function(err) {
+    // If an error occurs, print it to the console
+    console.log(err.message);
+  });
+
+db.Truck
+  .create({name: "Food Truck"})
+  .then(function(dbTruck) {
+    // If saved successfully, print the new Truck document to the console
+    console.log(dbTruck);
   })
   .catch(function(err) {
     // If an error occurs, print it to the console
