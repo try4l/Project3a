@@ -37,15 +37,8 @@ const Header = () => {
             <li className="nav-item">
               <a className="nav-link" href="/exp">Experimental</a>
             </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="/signUp" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dashboard
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a className="dropdown-item" href="/user">User</a>
-                <a className="dropdown-item" href="/admin">Admin</a>
-                <a className="dropdown-item" href="/admin/truck:id">Something else here</a>
-              </div>
+            <li className="nav-item">
+              <a className="nav-link" href="/signUp">Dashboard</a>
             </li>
           </ul>
         </div>
