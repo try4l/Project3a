@@ -2,8 +2,8 @@
 	{
 		"id": 1,
 		"name": "Al's Appetizers",
-		"image1": "/public/assets/images/foodtruck1.jpg",
-		"rating": 4.5,
+		"image": "./assets/images/foodtruck1.jpg",
+		"rating": 3.9,
 		"numratings": 3012,
 		"owner": "Al Dente",
 		"image2": "",
@@ -21,7 +21,7 @@
 	{
 		"id": 2,
 		"name": "Katie's Canapes",
-		"image1": "/public/assets/images/foodtruck2.jpg",
+		"image": ".assets/images/foodtruck2.jpg",
 		"rating": 4.5,
 		"numratings": 3012,
 		"owner": "Katie N. Crumpets",

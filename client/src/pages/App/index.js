@@ -20,7 +20,8 @@ import Auth from '../Auth/Auth';
 import About from '../About';
 import SignUp from '../SignUp';
 import TruckDetail from '../TruckDetail';
-import Exp from '../../components/Exp'
+import TruckSchedule from '../TruckSchedule';
+import Exp from '../../components/Exp';
 
 import NotFound from '../NotFound';
 
@@ -49,6 +50,7 @@ const App = () => {
 					<Route path="/truck/:id" component={TruckDetail}/>
 					<Route exact path="/about" component={About}/>
 					<Route exact path="/exp" component={Exp}/>
+					<Route exact path="/schedule" component={TruckSchedule}/>
 					<Route component={NotFound}/>
 				      
 			      </Switch>

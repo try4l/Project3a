@@ -4,6 +4,7 @@ import React from "react";
 //database info renders here
 const TruckForm = props =>
   <div className="container">
+
     <div className="row">
       <div className="col-lg-12">
         <div className="panel panel-primary">
@@ -15,6 +16,7 @@ const TruckForm = props =>
             </h3>
           </div>
           <div className="panel-body">
+
             <form action="/submit" method="post">
               <div className="form-group">
                 <label htmlFor="name">Truck Name</label>
@@ -36,35 +38,13 @@ const TruckForm = props =>
                 <input onChange={props.handleDescriptionChange} type="text" className="form-control" id="rating"/>
               </div>
               <button onClick={props.handleFormSubmit} type="submit" className="btn btn-primary">Submit</button>
-
             </form>
 
-            
-
           </div>
         </div>
       </div>
     </div>
 
-    <br/><br/>
-
-    <div className="row">
-      <div className="col-lg-12">
-        <div className="panel panel-primary">
-          <div className="panel-heading">
-            <h3 className="panel-title">
-              <strong>
-                <i className="fa fa-truck" aria-hidden="true"></i> Results
-              </strong>
-            </h3>
-          </div>
-          <div className="panel-body">
-            {props.renderTrucks()}
-          </div>
-        </div>
-      </div>
-    </div>
-    <br/><br/>
   </div>
 
 
