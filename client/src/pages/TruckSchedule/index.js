@@ -22,7 +22,7 @@ class TruckSchedule extends Component {
       <Container>
 
         <h1>
-          Truck Detail
+          Truck Schedule
         </h1>
         <Row>
           <Col xs="6"> <h2>When</h2> </Col>
