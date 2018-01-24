@@ -2,8 +2,8 @@
 	{
 		"id": 1,
 		"name": "Al's Appetizers",
-		"image": "./assets/images/foodtruck1.jpg",
-		"rating": 3.9,
+		"image": "../../assets/images/foodtruck1.jpg",
+		"rating": 4.2,
 		"numratings": 3012,
 		"owner": "Al Dente",
 		"image2": "",
@@ -21,14 +21,33 @@
 	{
 		"id": 2,
 		"name": "Katie's Canapes",
-		"image": ".assets/images/foodtruck2.jpg",
+		"image": "../../assets/images/foodtruck4.jpg",
 		"rating": 4.5,
 		"numratings": 3012,
 		"owner": "Katie N. Crumpets",
 		"image2": "",
 		"description": "Food for the sophisticated.",
 		"menu": "food",
-		"reviews": "mmmm, mmmmm",
+		"reviews": "Mmmm, mmmmm",
+		"locations": {
+			"mon": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"tues": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"wed": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"thurs": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
+			"fri": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"}	
+		}
+	},
+	{
+		"id": 3,
+		"name": "Carlos' Carnitas",
+		"image": "../../assets/images/foodtruck2.jpg",
+		"rating": 4.1,
+		"numratings": 3012,
+		"owner": "Carlos ",
+		"image2": "",
+		"description": "Food for the starving... or just hungry.",
+		"menu": "food",
+		"reviews": "Hey, not bad!",
 		"locations": {
 			"mon": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
 			"tues": {"lat": 32.842674, "long": 32.715736, "open": "9:00", "close": "17:00"},
