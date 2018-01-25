@@ -27,7 +27,9 @@
     "react-transition-group": "^2.2.1",
     "reactstrap": "^5.0.0-alpha.4"
   },
-  "author": "abd",
+  "engines": {
+    "node": "9.4"
+  },
   "license": "ISC",
   "scripts": {
     "server": "node server.js",
