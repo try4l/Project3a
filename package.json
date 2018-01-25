@@ -3,6 +3,19 @@
   "version": "0.1.0",
   "description": "Final Project for UCSD Coding Bootcamp",
   "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "test": "react-scripts test --env=jsdom",
+    "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.14.11"
+  },
   "dependencies": {
     "auth0-js": "^9.1.0",
     "axios": "^0.17.1",
@@ -24,18 +37,5 @@
     "reactstrap": "^5.0.0-alpha.4"
   },
   "author": "abd",
-  "license": "ISC",
-  "scripts": {
-    "server": "node server.js",
-    "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
-    "build": "node scripts/build.js",
-    "test": "react-scripts test --env=jsdom",
-    "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
-    "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "concurrently": "^3.5.1",
-    "nodemon": "^1.14.11"
-  }
+  "license": "ISC"
 }
