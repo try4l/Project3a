@@ -83,7 +83,7 @@ router.post("/api/saved", truckController.insert);
 router.delete("/api/saved/:id", truckController.delete);
 // Send every other request to the React app
 router.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(__dirname + "/client/build/index.html");
 });
 router.post('/*', function(req,res) {
   console.log('Call to unhandled path: ', req);
@@ -91,10 +91,6 @@ router.post('/*', function(req,res) {
 })
 
 app.use(router);
-
-// app.get('*', (req, res) => {
-//   res.sendFile(__dirname+'/client/build/index.html');
-// });
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
