@@ -1,8 +1,8 @@
 {
   "name": "project3a",
   "version": "0.1.0",
-  "private": true,
   "description": "Final Project for UCSD Coding Bootcamp",
+  "main": "server.js",
   "dependencies": {
     "auth0-js": "^9.1.0",
     "axios": "^0.17.1",
@@ -10,8 +10,10 @@
     "bootstrap": "^4.0.0-alpha.6",
     "classnames": "^2.2.5",
     "express": "^4.16.2",
+    "jquery": "^3.3.1",
     "mongoose": "^4.13.9",
     "morgan": "^1.9.0",
+    "popper.js": "^1.12.9",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.0",
     "react-dom": "^16.2.0",
@@ -27,7 +29,7 @@
     "server": "node server.js",
     "client": "node scripts/start-client.js",
     "start": "concurrently \"node server.js\" \"npm run client\"",
-    "build": "react-scripts build",
+    "build": "node scripts/build.js",
     "test": "react-scripts test --env=jsdom",
     "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
     "eject": "react-scripts eject"
