@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Final Project for UCSD Coding Bootcamp",
   "main": "server.js",
+  "homepage": "https://truck2find.herokuapp.com/",
   "dependencies": {
     "auth0-js": "^9.1.0",
     "axios": "^0.17.1",
