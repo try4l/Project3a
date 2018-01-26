@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { Button } from 'reactstrap';
 import classnames from 'classnames';
 
 import './style.css';
@@ -29,44 +30,56 @@ class TruckSchedule extends Component {
           <Col xs="6"> <h2>Where</h2> </Col>
         </Row>
         <Row>
+          <Col xs="6"> <hr /> </Col>
+          <Col xs="6"> <hr /> </Col>
+        </Row>
+        <Row>
           <Col> <h3>Day</h3> </Col>
           <Col> <h3>Start Time</h3> </Col>
           <Col> <h3>Stop Time</h3> </Col>
           <Col> <h3>Lat</h3> </Col>
           <Col> <h3>Long</h3> </Col>
-          <Col> <h3>Edit</h3> </Col>
+          <Col> <h3>Map</h3> </Col>
         </Row>
         <Row>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
+          <Col>Mon</Col>
+          <Col>0900</Col>
+          <Col>1700</Col>
+          <Col>32.715738</Col>
+          <Col>-117.161084</Col>
+          <Col> {<a href="https://www.latlong.net/c/?lat=32.715738&long=-117.161084" target="_blank">link</a>}  </Col>
         </Row>
         <Row>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
+          <Col>Tues</Col>
+          <Col>0800</Col>
+          <Col>1600</Col>
+          <Col>32.712073</Col>
+          <Col>-117.151358</Col>
+          <Col> {<a href="https://www.latlong.net/c/?lat=32.712073&long=-117.151358" target="_blank">link</a>}  </Col>
         </Row>
         <Row>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
+          <Col>Wed</Col>
+          <Col>0630</Col>
+          <Col>1430</Col>
+          <Col>32.853093</Col>
+          <Col>-117.182901</Col>
+          <Col> {<a href="https://www.latlong.net/c/?lat=32.853093&long=-117.182901" target="_blank">link</a>}  </Col>
         </Row>
         <Row>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
+          <Col>Thur</Col>
+          <Col>0800</Col>
+          <Col>1600</Col>
+          <Col>32.833052</Col>
+          <Col>-117.159975</Col>
+          <Col> {<a href="https://www.latlong.net/c/?lat=32.833052&long=-117.159975" target="_blank">link</a>}  </Col>
+        </Row>
+        <Row>
+          <Col>Fri</Col>
+          <Col>0600</Col>
+          <Col>2200</Col>
+          <Col>32.715960</Col>
+          <Col>-117.146026</Col>
+          <Col> {<a href="https://www.latlong.net/c/?lat=32.715960&long=-117.146026" target="_blank">link</a>} </Col>
         </Row>
         
       </Container>
