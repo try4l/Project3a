@@ -33,7 +33,7 @@ class SimpleForm extends React.Component {
           Name:
           <input name="value1" type="text" value={this.state.value1} onChange={this.handleChange} />
         </label>
-       <label>
+        <label>
           Address:
           <input name="value2" type="text" value={this.state.value2} onChange={this.handleChange} />
         </label>
