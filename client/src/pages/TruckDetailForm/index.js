@@ -32,13 +32,6 @@ class TruckDetailForm extends Component {
     //this.getSavedTrucks()
   }
 
-  // Method for getting saved articles (all articles) from database
-  // getSavedArticles = () => {
-  //   API.getArticle()
-  //     .then((res) => {
-  //       this.setState({ saved: res.data });
-  //     });
-  // }
 
   // Helper method renders one search result div for each truck
   renderTrucks = () => {
@@ -57,20 +50,6 @@ class TruckDetailForm extends Component {
     ));
   }
 
-  // Helper method renders one div for each saved article
-  //   renderSaved = () => {
-  //   return this.state.saved.map(save => (
-  //     <Saved
-  //       _id={save._id}
-  //       key={save._id}
-  //       title={save.title}
-  //       date={save.date}
-  //       url={save.url}
-  //       handleDeleteButton={this.handleDeleteButton}
-  //       getSavedArticles={this.getSavedArticles}
-  //     />
-  //   ));
-  // }
  
   handleNameChange = (event) => {
     this.setState({ name: event.target.value });
@@ -123,28 +102,8 @@ class TruckDetailForm extends Component {
       .then(
         console.log("Saved!")
         );
-  //   .then(this.getSavedArticles());
-    // //API.searchNYT(this.state.topic, this.state.startYear, this.state.endYear)
-    //   .then((res) => {
-    //     this.setState({ articles: res.data.response.docs });
-    //     console.log("this.state.articles: ", this.state.articles);
-      // });
   }
 
-  // On save article button click, add article to database
-  // handleSaveButton = (id) => {
-  //   const findArticleByID = this.state.articles.find((el) => el._id === id);
-  //   console.log("findArticleByID: ", findArticleByID);
-  //   const newSave = {title: findArticleByID.headline.main, date: findArticleByID.pub_date, url: findArticleByID.web_url};
-  //   API.saveArticle(newSave)
-  //   .then(this.getSavedArticles());
-  // }
-
-  // On delete article button click, remove article from database
-  // handleDeleteButton = (id) => {
-  //   API.deleteArticle(id)
-  //     .then(this.getSavedArticles());
-  // }
   
   render() {
     const { className, ...props } = this.props;
