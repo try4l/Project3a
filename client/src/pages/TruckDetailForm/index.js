@@ -72,19 +72,32 @@ class TruckDetailForm extends Component {
   //   ));
   // }
  
-  // Keep track of what user types into topic input so that input can be grabbed later
   handleNameChange = (event) => {
     this.setState({ name: event.target.value });
   }
 
-  // Keep track of what user types into topic input so that input can be grabbed later
   handleImageChange = (event) => {
     this.setState({ image: event.target.value });
   }
 
-  // Keep track of what user types into topic input so that input can be grabbed later
   handleRatingChange = (event) => {
     this.setState({ rating: event.target.value });
+  }
+
+  handleNumRatingsChange = (event) => {
+    this.setState({ numRatings: event.target.value });
+  }
+
+  handleOwnerChange = (event) => {
+    this.setState({ owner: event.target.value });
+  }
+
+  handleDescriptionChange = (event) => {
+    this.setState({ description: event.target.value });
+  }
+
+  handleDateChange = (event) => {
+    this.setState({ date: event.target.value });
   }
 
  
@@ -96,7 +109,16 @@ class TruckDetailForm extends Component {
     console.log("this.state.name: ", this.state.name);
     console.log("this.state.image: ", this.state.image);
     console.log("this.state.rating: ", this.state.rating);   
-    const newSave = {name: this.state.name, image: this.state.image, rating: this.state.rating};
+    console.log("this.state.numRatings: ", this.state.numRatings);   
+    console.log("this.state.owner: ", this.state.owner);   
+    console.log("this.state.description: ", this.state.description);   
+    console.log("this.state.date: ", this.state.date);   
+    const newSave = 
+      {
+        name: this.state.name, image: this.state.image, rating: this.state.rating, 
+        numRatings: this.state.numRatings, owner: this.state.owner, description: this.state.description,
+        date: this.state.date
+      };
     API.saveTruck(newSave)
       .then(
         console.log("Saved!")
@@ -141,8 +163,10 @@ class TruckDetailForm extends Component {
                 handleNameChange={this.handleNameChange}
                 handleImageChange={this.handleImageChange}
                 handleRatingChange={this.handleRatingChange}
+                handleNumRatingsChange={this.handleNumRatingsChange}
                 handleOwnerChange={this.handleOwnerChange}
-                handleDescriptionChange={this.handleDesriptionChange}
+                handleDescriptionChange={this.handleDescriptionChange}
+                handleDateChange={this.handleDateChange}
                 handleFormSubmit={this.handleFormSubmit}
                 renderTrucks={this.renderTrucks}
               />

@@ -18,8 +18,31 @@ class TruckDetail extends Component {
   constructor(props) {
   super(props);
   this.state = {
-    trucks
+    trucks,
+    saved: []
     };
+  }
+
+ // When the component mounts, get a list of all saved articles and update this.state.saved
+  componentDidMount() {
+    this.getSavedTrucks()
+  }
+
+  // NOTE: 
+  // To use real database data, use: 
+  //    {this.state.saved.map(truck => (
+  //  below
+  // To use canned data for demo, use:
+  //    {this.state.trucks.map(truck => (
+  // Other form for detailed truck info (times and locations) can be extended to use real data using
+  // the same strategy.
+    
+  // Method for getting saved articles (all articles) from database
+  getSavedTrucks = () => {
+    API.getTruck()
+      .then((res) => {
+        this.setState({ saved: res.data });
+      });
   }
 
   render() {
@@ -41,9 +64,13 @@ class TruckDetail extends Component {
                 <Truck
                 id={truck.id}
                 key={truck.id}
-                image={truck.image}
                 name={truck.name}
+                image={truck.image}
                 rating={truck.rating}            
+                owner={truck.owner}            
+                description={truck.description}            
+                numRatings={truck.numRatings} 
+                date={truck.date}           
                 />
               ))}
 
