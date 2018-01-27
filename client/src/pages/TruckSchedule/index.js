@@ -10,6 +10,7 @@ import Saved from "../../components/Saved";
 import Results from "../../components/Results";
 import API from "../../utils/api";
 
+// Note: Showing hardcoded data for now -- extend this as per the TruckDetail index.js form
 class TruckSchedule extends Component {
   static propTypes = {}
   static defaultProps = {}
