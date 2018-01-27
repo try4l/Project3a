@@ -1,3 +1,4 @@
+// Component shows NavBar on each 'page'
 import React from "react";
 
 const Header = () => {

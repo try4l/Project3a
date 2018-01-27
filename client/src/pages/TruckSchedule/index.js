@@ -1,3 +1,4 @@
+// Shows Detailed Truck Data (time and location)
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { Button } from 'reactstrap';
