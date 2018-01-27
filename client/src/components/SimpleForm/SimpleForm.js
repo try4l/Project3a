@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import ReactDOM from 'react-dom';
+import React from "react";
 
 class SimpleForm extends React.Component {
   constructor(props) {

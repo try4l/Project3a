@@ -1,9 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from 'reactstrap';
-import { Card, Button, CardImg, CardTitle, CardText, CardColumns, CardSubtitle, CardBody } from 'reactstrap';
-import { CardDeck, CardGroup } from 'reactstrap';
-import {Image} from 'react-bootstrap';
-import classnames from 'classnames';
+import { Card, CardImg, CardBody } from 'reactstrap';
 
 class Truck extends React.Component {
   state = {
@@ -11,7 +8,7 @@ class Truck extends React.Component {
     };
 
   render() {
-    const { className, ...props } = this.props;
+
     return (
 
       <Container>

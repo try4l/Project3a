@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import './style.css';
 
 // App Components
-import Saved from "../../components/Saved";
 import Results from "../../components/Results";
 import TruckForm from "../../components/TruckForm";
 import API from "../../utils/api";

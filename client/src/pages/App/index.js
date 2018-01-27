@@ -1,5 +1,5 @@
 
-import React, { Component} from 'react';
+import React from 'react';
 //import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
@@ -13,7 +13,6 @@ import TruckDetailForm from '../TruckDetailForm';
 // CLIENT ROUTE COMPONENTS
 import UserHome from '../UserHome';
 
-import { Navbar, Button } from 'react-bootstrap';
 // PUBLIC ROUTE COMPONENTS
 import Main from '../Main';
 import Auth from '../Auth/Auth';

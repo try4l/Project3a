@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import { CardColumns, CardDeck, CardGroup } from 'reactstrap';
+import { CardColumns, CardGroup } from 'reactstrap';
 import {Image} from 'react-bootstrap';
 
 // App Components
-import Saved from "../../components/Saved";
-import TruckForm from "../../components/TruckForm";
-import Results from "../../components/Results";
 import Truck from "../../components/Truck";
 import trucks from "../../trucks.json";
 
@@ -26,7 +23,6 @@ class Main extends Component {
   render() {
 
     var background = {backgroundSize : 'cover', margin: 'auto'};
-    const { className, ...props } = this.props;
 
     return (
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 
 import { Form, FormGroup, Label, Input } from 'reactstrap';
-import { Card, Button, ButtonGroup, CardTitle, CardText, Row, Col, CardLink } from 'reactstrap';
+import { Card, Button, CardTitle, CardText, Col, } from 'reactstrap';
 
 import './style.css';
 
