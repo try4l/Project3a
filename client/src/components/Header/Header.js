@@ -35,9 +35,6 @@ const Header = () => {
               <a className="nav-link" href="/schedule">Truck Schedule</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/exp">Experimental</a>
-            </li>
-            <li className="nav-item">
               <a className="nav-link" href="/signUp">Dashboard</a>
             </li>
           </ul>
