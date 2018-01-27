@@ -20,7 +20,6 @@ import About from '../About';
 import SignUp from '../SignUp';
 import TruckDetail from '../TruckDetail';
 import TruckSchedule from '../TruckSchedule';
-import Exp from '../../components/Exp';
 
 import NotFound from '../NotFound';
 
