@@ -35,9 +35,14 @@ const TruckForm = props =>
               <div className="form-group">
                 <label htmlFor="owner">Owner</label>
                 <input onChange={props.handleOwnerChange} type="text" className="form-control" id="owner"/>
-              </div><div className="form-group">
-                <label htmlFor="end-time">Description</label>
-                <input onChange={props.handleDescriptionChange} type="text" className="form-control" id="rating"/>
+              </div>
+              <div className="form-group">
+                <label htmlFor="description">Description</label>
+                <input onChange={props.handleDescriptionChange} type="text" className="form-control" id="description"/>
+              </div>
+              <div className="form-group">
+                <label htmlFor="end-time">Number of Ratings</label>
+                <input onChange={props.handleNumRatingsChange} type="text" className="form-control" id="numRatings"/>
               </div>
               <button onClick={props.handleFormSubmit} type="submit" className="btn btn-primary">Submit</button>
             </form>
